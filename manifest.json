@@ -1,0 +1,26 @@
+{
+
+    "manifest_version": 2,
+    "name": "DEW",
+    "version": "1.0",
+  
+    "description": "Discord Export for Wordle. Appends player's guesses as spoiler-hidden text for posting in Discord.",
+  
+    "icons": {
+      "48": "icons/dew-48.png"
+    },
+
+    "permissions" : [
+      "clipboardRead",
+      "clipboardWrite"
+    ],
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.nytimes.com/games/wordle/*"],
+        "js": ["dew.js"]
+      }
+    ]
+  
+  }
+  
