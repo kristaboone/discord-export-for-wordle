@@ -16,7 +16,12 @@ function getGuess(guessNumber) {
 
     const index = guessNumber - 1
     const gameRows = app.querySelectorAll('[class^="Row-module_row_"]')
-    return gameRows[index].textContent.toUpperCase()
+
+    if(USER_SETTINGS.useLowercase) {
+        return gameRows[index].textContent.toLowerCase();
+    } else {
+        return gameRows[index].textContent.toUpperCase();
+    }
 }
 
 // Edit the text from the share button export so that the 
@@ -26,11 +31,16 @@ function editShareText(originalClipText) {
     const lines = originalClipText.split(/\r\n|\r|\n/)
     let newText = ""
 
+    let lastWordPosition = lines.length-1;
+    if(USER_SETTINGS.spoilLastWord) {
+        lastWordPosition = lines.length;
+    }
+
     for(var i = 0; i < lines.length; ++i) {
         newText += lines[i]
 
         // Lines 2-n will be guesses
-        if (i > 1 && i != lines.length-1) {
+        if (i > 1 && i != lastWordPosition) {
             var guessNumber = i - 1
             var guessText = getGuess(guessNumber)
             if(guessText === "") {
