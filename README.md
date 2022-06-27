@@ -55,9 +55,10 @@ The current iteration has been tested with Firefox and Chrome.
 ## Chrome
 
 1. Clone this repository
-2. Open Chrome
-3. Click the puzzle piece in the upper right-hand side of the taskbar (OR if you do not see this, type "chrome://extensions/" into the address bar)
-4. In the upper right-hand corner of the screen, click on the "Developer mode" toggle button
-5. Click the "Load unpacked" button that was just revealed by unlocking developer mode
-6. Navigate to and select this repository folder
-7. Head over to the [NYTimes Wordle Site](https://www.nytimes.com/games/wordle/index.html) and try it out!
+2. Move or copy the Manifest Version 3.0 file from `dew/mv3/manifest.json` into the `dew` folder
+3. Open Chrome
+4. Click the puzzle piece in the upper right-hand side of the taskbar (OR if you do not see this, type "chrome://extensions/" into the address bar)
+5. In the upper right-hand corner of the screen, click on the "Developer mode" toggle button
+6. Click the "Load unpacked" button that was just revealed by unlocking developer mode
+7. Navigate to and select `dew` repository folder
+8. Head over to the [NYTimes Wordle Site](https://www.nytimes.com/games/wordle/index.html) and try it out!
