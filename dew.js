@@ -16,7 +16,7 @@ function getGuess(guessNumber) {
 
     const index = guessNumber - 1
     const gameRows = app.querySelectorAll('[class^="Row-module_row_"]')
-    return gameRows[index].textContent
+    return gameRows[index].textContent.toUpperCase()
 }
 
 // Edit the text from the share button export so that the 
