@@ -47,12 +47,26 @@ function editShareText(originalClipText) {
     navigator.clipboard.writeText(newText)
 }
 
-// Executed when the share button is clicked
-function onShareClicked() {
-    // Pause while the default callback fills the clipboard
-    // A little janky, yes, but it does the trick.
-    setTimeout(function() { navigator.clipboard.readText()
-        .then(clipText => editShareText(clipText))}, 500);
+// Add a secondary share button for DEW
+function addDewButton(shareButton) {
+    var dewButton = shareButton.cloneNode(true);
+    dewButton.textContent = "Discord";
+    dewButton.setAttribute("style", "background: #5865F2");
+    dewButton.addEventListener('click', event => {
+        // Do not let the event bubble up to the parent
+        event.preventDefault();
+        event.stopPropagation();
+
+        // Execute the normal share logic to fill the clipboard
+        shareButton.click();
+
+        // Pause while the default callback fills the clipboard
+        // A little janky, yes, but it does the trick.
+        setTimeout(function() { navigator.clipboard.readText()
+            .then(clipText => editShareText(clipText))}, 500);
+    });
+
+    shareButton.parentElement.append(dewButton);
 }
 
 // Callback for when mutation of the app element is observed
@@ -61,10 +75,10 @@ const mutationObserverCallback = function (mutationsList, observer) {
     for (const mutation of mutationsList) {
         if (mutation.type === 'childList') {
             for (const node of mutation.addedNodes) {
-                // If we can find the share button, override its behavior
+                // Add our custom button next to the share button
                 var shareButton = node.querySelector("#share-button");
                 if (shareButton) {
-                    shareButton.onclick = onShareClicked
+                    addDewButton(shareButton);
                 }
             }
         }
