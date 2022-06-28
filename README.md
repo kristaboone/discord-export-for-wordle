@@ -57,7 +57,7 @@ The current iteration has been tested with Firefox and Chrome.
 
 ## Firefox
 
-1. Clone this repository, or download `dew-1.0-an+fx.xpi` in `/xpi`
+1. Download `dew-<version#>-firefox.xpi` from the latest release
 2. Open FireFox
 3. Use `ctrl + shift + a` to open the Add-Ons Manager tab
 4. Click the gear on the upper right-hand side of the screen
@@ -67,11 +67,11 @@ The current iteration has been tested with Firefox and Chrome.
 
 ## Chrome
 
-1. Clone this repository
-2. Move or copy the Manifest Version 3.0 file from `dew/mv3/manifest.json` into the `dew` folder
+1. Download `dew-<version#>-chrome.zip` from the latest release
+2. Unzip folder to a convenient location
 3. Open Chrome
 4. Click the puzzle piece in the upper right-hand side of the taskbar (OR if you do not see this, type "chrome://extensions/" into the address bar)
 5. In the upper right-hand corner of the screen, click on the "Developer mode" toggle button
 6. Click the "Load unpacked" button that was just revealed by unlocking developer mode
-7. Navigate to and select `dew` repository folder
+7. Navigate to and select the folder you unzipped in step 2
 8. Head over to the [NYTimes Wordle Site](https://www.nytimes.com/games/wordle/index.html) and try it out!
