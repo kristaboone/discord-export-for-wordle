@@ -63,5 +63,25 @@ if (useBrowserSyntax) {
   }
 }
 
+function runSavedAnimation() {
+  let checkmark = document.getElementById("checkmark");
+  let checkmarkLabel = document.getElementById("checkmark-label");
+
+  // Show checkmark (runs animation)
+  checkmark.style.display = "inline";
+
+  // Show checkmark label (delayed a little bit for aesthetics)
+  setTimeout(function(){
+    checkmarkLabel.style.display = "inline";
+  }, 800);
+
+  // Hide after some time
+  setTimeout(function(){
+    checkmarkLabel.style.display = "none";
+    checkmark.style.display = "none";
+  }, 3000);
+}
+
 document.addEventListener("DOMContentLoaded", restoreOptions);
 document.querySelector("form").addEventListener("submit", saveOptions);
+document.querySelector("form").addEventListener("submit", runSavedAnimation);
