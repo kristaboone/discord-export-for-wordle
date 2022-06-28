@@ -38,6 +38,19 @@ This output, when pasted into Discord, will render as the following:
 
 This allows you to share your guessing journey with your friends, but keeping things spoiler-free- let's just hope they don't take a peek at those words until they've finished their game. ;)
 
+## User Options
+
+There are two settings available to the user to edit:
+
+ - Use Lowercase Words (default=```false```): When set to true, this will use lowercase letters for the copied text.
+ - Spoil Last Word (default=```false```): When set to true, this will add spoiler text to the last word (the Wordle answer).
+
+These settings can be changed by navigating to the settings page for the extension in your browser. More preferably, if you have the extension button available in your toolbar, you can use this to adjust your settings.
+
+<img src="img/settings-1.PNG" height=150px/>     <img src="img/settings-2.PNG" height=150px/>
+
+> NOTE: You will need to refresh the page before the settings are used to change the output text.
+
 # Installation
 
 The current iteration has been tested with Firefox and Chrome.

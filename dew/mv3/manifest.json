@@ -5,12 +5,6 @@
   "homepage_url": "https://github.com/kristaboone/discord-export-for-wordle",
   "manifest_version": 3,
   "minimum_chrome_version": "100",
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "kristacboone@gmail.com",
-      "strict_min_version": "100.0"
-    }
-  },
   "icons": {
     "48": "icons/dew-48.png"
   },
@@ -33,5 +27,12 @@
   ],
   "options_ui": {
     "page": "options.html"
+  },
+  "action": {
+    "default_popup": "options.html",
+    "default_icon": {
+      "16": "icons/dew-48.png",
+      "32": "icons/dew-48.png"
+    }
   }
 }

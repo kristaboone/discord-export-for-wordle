@@ -33,5 +33,13 @@
   ],
   "options_ui": {
     "page": "options.html"
+  },
+  "browser_action": {
+    "browser_style": true,
+    "default_popup": "options.html",
+    "default_icon": {
+      "16": "icons/dew-48.png",
+      "32": "icons/dew-48.png"
+    }
   }
 }
