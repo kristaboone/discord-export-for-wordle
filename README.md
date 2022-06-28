@@ -38,6 +38,19 @@ This output, when pasted into Discord, will render as the following:
 
 This allows you to share your guessing journey with your friends, but keeping things spoiler-free- let's just hope they don't take a peek at those words until they've finished their game. ;)
 
+## User Options
+
+There are two settings available to the user to edit:
+
+ - Use Lowercase Words (default=```false```): When set to true, this will use lowercase letters for the copied text.
+ - Spoil Last Word (default=```false```): When set to true, this will add spoiler text to the last word (the Wordle answer).
+
+These settings can be changed by navigating to the settings page for the extension in your browser. More preferably, if you have the extension button available in your toolbar, you can use this to adjust your settings.
+
+<img src="img/settings-1.PNG" height=150px/>     <img src="img/settings-2.PNG" height=150px/>
+
+> NOTE: You will need to refresh the page before the settings are used to change the output text.
+
 # Installation
 
 The current iteration has been tested with Firefox and Chrome.
@@ -55,9 +68,10 @@ The current iteration has been tested with Firefox and Chrome.
 ## Chrome
 
 1. Clone this repository
-2. Open Chrome
-3. Click the puzzle piece in the upper right-hand side of the taskbar (OR if you do not see this, type "chrome://extensions/" into the address bar)
-4. In the upper right-hand corner of the screen, click on the "Developer mode" toggle button
-5. Click the "Load unpacked" button that was just revealed by unlocking developer mode
-6. Navigate to and select this repository folder
-7. Head over to the [NYTimes Wordle Site](https://www.nytimes.com/games/wordle/index.html) and try it out!
+2. Move or copy the Manifest Version 3.0 file from `dew/mv3/manifest.json` into the `dew` folder
+3. Open Chrome
+4. Click the puzzle piece in the upper right-hand side of the taskbar (OR if you do not see this, type "chrome://extensions/" into the address bar)
+5. In the upper right-hand corner of the screen, click on the "Developer mode" toggle button
+6. Click the "Load unpacked" button that was just revealed by unlocking developer mode
+7. Navigate to and select `dew` repository folder
+8. Head over to the [NYTimes Wordle Site](https://www.nytimes.com/games/wordle/index.html) and try it out!
